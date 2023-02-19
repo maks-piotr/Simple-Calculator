@@ -22,12 +22,10 @@ public class Output extends JPanel {
         revalidate();
         repaint();
     }
-    /** Wielkość czcionki dla seperatora. */
-    public static final int SEPERATOR_SIZE = 15;
     /** Wielkość czcionki dla wyświetlanych liczb. */
     public static final int FONT_SIZE = 40;
     /** Pierwszy wymiar layoutu. */
-    public static final int GRID_SIZE1 = 3;
+    public static final int GRID_SIZE1 = 2;
     /** Drugi wymiar layoutu. */
     public static final int GRID_SIZE2 = 24;
     /** Konstruktor Outputu.
@@ -37,13 +35,10 @@ public class Output extends JPanel {
         this.calculator = calculatorR;
         bufferLabel = new JLabel(calculator.getBuffer());
         bufferLabel.setFont(new Font("Serif", Font.BOLD, FONT_SIZE));
-        separator = new JLabel(" ");
-        separator.setFont(new Font("Serif", Font.BOLD, SEPERATOR_SIZE));
         currentLabel = new JLabel(calculator.getCurrent());
         currentLabel.setFont(new Font("Serif", Font.BOLD, FONT_SIZE));
         this.setLayout(new GridLayout(GRID_SIZE1, GRID_SIZE2));
         this.add(bufferLabel);
-        this.add(separator);
         this.add(currentLabel);
     }
 }

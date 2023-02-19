@@ -62,7 +62,7 @@ public class TheCalculator {
             bufferB = false;
             buffer = 0;
             operation = ' ';
-            deletable = true;
+            deletable = false;
         }
     }
 
